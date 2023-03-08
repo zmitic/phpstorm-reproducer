@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace App\Transformer;
 
 use App\Entity\Product;
+use App\Transformer\Model\OneLevelDeep\AbstractOneLevelDeepTransformer;
 
 /**
- * @implements TransformerInterface<Product, string>
+ * @extends AbstractOneLevelDeepTransformer<Product, string>
  */
-class ProductTransformer implements TransformerInterface
+class ProductTransformer extends AbstractOneLevelDeepTransformer
 {
-    public function transform($input): string
+    protected function transform($entity)
     {
-        return $input->getName();
+        return $entity->getName();
     }
 }
