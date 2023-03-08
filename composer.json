@@ -15,9 +15,5 @@
     },
     "require-dev": {
         "vimeo/psalm": "5.x-dev"
-    },
-    "repositories": [{
-        "type": "github",
-        "url": "git@github.com:zmitic/phpstorm-reproducer-vendor.git"
-    }]
+    }
 }
